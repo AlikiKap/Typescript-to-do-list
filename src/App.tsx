@@ -1,5 +1,5 @@
 import React, {FC, ChangeEvent, useState} from 'react';
-import './App.css';
+import './styles/App.scss';
 import TodoTask from './Components/TodoTask';
 import { ITask } from "./Interfaces";
 
@@ -35,15 +35,23 @@ const addTask = ():void =>{
 
 const completeTask = (taskNameToDelete:string):void => {
       setTodoList(todoList.filter((task) => {
-        return task.taskName != taskNameToDelete
+        return task.taskName !== taskNameToDelete
       }))
 }
 
   return (
+    <>
+    <style>{`
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+  `}</style>
     <div className="App">
       <div className="header">
-          <div className='inputContainer'>
+          <div className='inputs-container'>
           <input 
+          className='task-input'
           type= "text"
           placeholder='task'
           name ='task'
@@ -52,6 +60,7 @@ const completeTask = (taskNameToDelete:string):void => {
           </input>
 
           <input
+          className='task-input'
           type= "number"
           placeholder='deadline'
           name ='deadline'
@@ -60,7 +69,7 @@ const completeTask = (taskNameToDelete:string):void => {
           </input>
 
           </div>
-          <button onClick={addTask}>Add task</button>
+          <button className='add-task-btn' onClick={addTask}>Add task</button>
       </div>
       <div className="todoList">
       {todoList.map((task: ITask, key:number)=> {
@@ -68,6 +77,7 @@ const completeTask = (taskNameToDelete:string):void => {
       })}
       </div>
     </div> 
+    </>
   );
 }
 

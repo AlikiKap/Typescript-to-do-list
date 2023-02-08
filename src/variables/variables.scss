@@ -1,0 +1,47 @@
+$font: 'Poppins', sans-serif;
+$BtnTextColor: #f5edf5;
+$accentColor: #d240cf;
+$taskBackgroundColor: #eddaed;
+$backgroundColor: #ce9ecf;
+
+@mixin InputStyle{
+    width: 70%;
+    padding: 5%;
+    border-radius: 16px;
+    border: 2px solid $accentColor;
+    margin: 1%;
+
+    
+}
+
+@mixin TaskCard{
+    margin: 1%;
+    padding: 2%;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $taskBackgroundColor;
+    border-radius: 8px;
+    .days-left-text{
+    font-weight: 300;
+    }
+    &:hover{
+    background-color: #edcbed;
+    }
+    .done-btn{
+        @include DoneButtonStyle;
+    &:hover{
+        color:#af29ac;
+    }
+    }
+}
+@mixin DoneButtonStyle{
+    background-color: transparent;
+    border: 0;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 16px;
+    color: $accentColor;
+}

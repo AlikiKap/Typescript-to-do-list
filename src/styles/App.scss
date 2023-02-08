@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import "../variables/variables.scss";
+
+
+.App {
+  height: 100vh;
+  text-align: center;
+  background-color: $backgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $font;
+  
+
+  .inputs-container{
+    display: flex;
+    flex-direction: row;
+
+    .task-input{
+      @include InputStyle;
+    }
+  }
+  .add-task-btn{
+    margin: 4%;
+    width: auto;
+
+    font-family: $font;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: $accentColor;
+    color: $BtnTextColor;
+    border: 0;
+    &:hover{
+      background-color: #ba2cb7;
+      color: #e1c4e1;
+    }
+  }
+
+  .todoList{
+    display: flex;
+    flex-direction: column;
+    justify-self: space-between;
+
+  }
+  .task{
+    @include TaskCard
+  }
+
+}
