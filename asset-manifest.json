@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/typescript-to-do-list/static/css/main.fc2c540a.css",
-    "main.js": "/typescript-to-do-list/static/js/main.74eee49b.js",
-    "static/js/787.1c0c3500.chunk.js": "/typescript-to-do-list/static/js/787.1c0c3500.chunk.js",
-    "index.html": "/typescript-to-do-list/index.html",
-    "main.fc2c540a.css.map": "/typescript-to-do-list/static/css/main.fc2c540a.css.map",
-    "main.74eee49b.js.map": "/typescript-to-do-list/static/js/main.74eee49b.js.map",
-    "787.1c0c3500.chunk.js.map": "/typescript-to-do-list/static/js/787.1c0c3500.chunk.js.map"
+    "main.css": "/Typescript-to-do-list/static/css/main.fc2c540a.css",
+    "main.js": "/Typescript-to-do-list/static/js/main.92ad6b2a.js",
+    "static/js/787.1c0c3500.chunk.js": "/Typescript-to-do-list/static/js/787.1c0c3500.chunk.js",
+    "index.html": "/Typescript-to-do-list/index.html",
+    "main.fc2c540a.css.map": "/Typescript-to-do-list/static/css/main.fc2c540a.css.map",
+    "main.92ad6b2a.js.map": "/Typescript-to-do-list/static/js/main.92ad6b2a.js.map",
+    "787.1c0c3500.chunk.js.map": "/Typescript-to-do-list/static/js/787.1c0c3500.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc2c540a.css",
-    "static/js/main.74eee49b.js"
+    "static/js/main.92ad6b2a.js"
   ]
 }
