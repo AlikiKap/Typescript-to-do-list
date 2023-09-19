@@ -76,7 +76,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Aliki Kapasakalidi - [@AlikiKap](https://www.linkedin.com/in/aliki-kapasakalidi-921891203/) - email@example.com
+Aliki Kapasakalidi - [@AlikiKap](https://www.linkedin.com/in/aliki-kapasakalidi-921891203/) - aliki02.kapasakalidi@gmail.com
 
 Project Link: [https://github.com/AlikiKap/Typescript-to-do-list.git](https://github.com/AlikiKap/Typescript-to-do-list.git)
 
