@@ -78,13 +78,13 @@ Project Link: [https://github.com/AlikiKap/Typescript-to-do-list.git](https://gi
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/AlikiKap/Typescript-to-do-list.svg?style=for-the-badge
 [contributors-url]: https://github.com/AlikiKap/Typescript-to-do-list/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/AlikiKap/Typescript-to-do-list.svg?style=for-the-badge
 [forks-url]: https://github.com/AlikiKap/Typescript-to-do-list/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/AlikiKap/Typescript-to-do-list.svg?style=for-the-badge
 [stars-url]: https://github.com/AlikiKap/Typescript-to-do-list/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/AlikiKap/Typescript-to-do-list.svg?style=for-the-badge
 [issues-url]: https://github.com/AlikiKap/Typescript-to-do-list/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/AlikiKap/Typescript-to-do-list/blob/main/LICENSE
