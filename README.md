@@ -5,6 +5,10 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+<br />
+<div align="center">
+  <h3 align="center">To-do List</h3>
+
   <p align="center">
     <br />
     <a href="https://github.com/AlikiKap/Typescript-to-do-list.git"><strong>Explore the docs »</strong></a>
@@ -16,6 +20,7 @@
     ·
     <a href="https://github.com/AlikiKap/Typescript-to-do-list/issues">Request Feature</a>
   </p>
+</div>
 
 ![Alt text](image.png)
 
