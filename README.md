@@ -37,6 +37,8 @@ This To-Do List App is a simple yet powerful tool designed to help users manage 
 Demo: https://alikikap.github.io/Typescript-to-do-list/
 ### Built With
 * [![React][React.js]][React-url]
+* ![Static Badge](https://img.shields.io/badge/sass-000000?style=for-the-badge&logo=sass&logoColor=White)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation
