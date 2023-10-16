@@ -1,4 +1,4 @@
-import React, {FC, ChangeEvent, useState} from 'react';
+import React, {FC, ChangeEvent, useState, ButtonHTMLAttributes} from 'react';
 import './styles/App.scss';
 import TodoTask from './Components/TodoTask';
 import { ITask } from "./Interfaces";
@@ -19,6 +19,12 @@ const  handleChange = (event: ChangeEvent<HTMLInputElement>):void => {
     setDeadline(Number(event.target.value))
   }
 };
+
+const handleKeypress = (event: any) => {
+  if (event.code === 'Enter'){
+    addTask();
+  }
+}
 
 const addTask = ():void =>{
 
@@ -56,7 +62,8 @@ const completeTask = (taskNameToDelete:string):void => {
           placeholder='task'
           name ='task'
           value={task}
-          onChange={handleChange}>
+          onChange={handleChange}
+          onKeyDown={handleKeypress}>
           </input>
 
           <input
@@ -65,11 +72,12 @@ const completeTask = (taskNameToDelete:string):void => {
           placeholder='deadline'
           name ='deadline'
           value={deadline}
-          onChange={handleChange}>
+          onChange={handleChange}
+          onKeyDown={handleKeypress}>
           </input>
 
           </div>
-          <button className='add-task-btn' onClick={addTask}>Add task</button>
+          <button className='add-task-btn' onClick={addTask} type="submit">Add task</button>
       </div>
       <div className="todoList">
       {todoList.map((task: ITask, key:number)=> {
