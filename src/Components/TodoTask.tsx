@@ -1,8 +1,8 @@
 import React from 'react'
-import { ITask } from '../Interfaces'
+import { Task } from '../Interfaces'
 
 interface Props{
-    task: ITask;
+    task: Task;
     completeTask(taskNameToDelete:string): void;
 }
 

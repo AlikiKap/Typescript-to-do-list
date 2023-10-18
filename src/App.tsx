@@ -1,14 +1,15 @@
 import React, {FC, ChangeEvent, useState, ButtonHTMLAttributes} from 'react';
 import './styles/App.scss';
 import TodoTask from './Components/TodoTask';
-import { ITask } from "./Interfaces";
+import { Task } from "./Interfaces";
+import TaskTimer from './Components/TaskTimer';
 
 
 const App: FC =() => {
 
 const [task, setTask] = useState<string>("");
 const [deadline, setDeadline] = useState<number>(0);
-const [todoList, setTodoList] = useState<ITask[]>([]);
+const [todoList, setTodoList] = useState<Task[]>([]);
 
 
 const  handleChange = (event: ChangeEvent<HTMLInputElement>):void => {
@@ -20,7 +21,7 @@ const  handleChange = (event: ChangeEvent<HTMLInputElement>):void => {
   }
 };
 
-const handleKeypress = (event: any) => {
+const handleKeypress = (event: any):void => {
   if (event.code === 'Enter'){
     addTask();
   }
@@ -45,6 +46,10 @@ const completeTask = (taskNameToDelete:string):void => {
       }))
 }
 
+
+const time = new Date();
+time.setMinutes(time.getMinutes() + 25);
+
   return (
     <>
     <style>{`
@@ -54,6 +59,7 @@ const completeTask = (taskNameToDelete:string):void => {
     }
   `}</style>
     <div className="App">
+      <TaskTimer expiryTimestamp={time}/>
       <div className="header">
           <div className='inputs-container'>
           <input 
@@ -80,7 +86,7 @@ const completeTask = (taskNameToDelete:string):void => {
           <button className='add-task-btn' onClick={addTask} type="submit">Add task</button>
       </div>
       <div className="todoList">
-      {todoList.map((task: ITask, key:number)=> {
+      {todoList.map((task: Task, key:number)=> {
         return <TodoTask key={key} task ={task} completeTask = {completeTask}/>;
       })}
       </div>
