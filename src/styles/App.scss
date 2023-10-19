@@ -3,7 +3,7 @@
 
 
 .App {
-  height: 100vh;
+  height: 100%;
   text-align: center;
   background-color: $backgroundColor;
   display: flex;
@@ -11,20 +11,40 @@
   align-items: center;
   flex-direction: column;
   font-family: $font;
-  
 
-  .inputs-container{
+
+  .timer-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 50%;
+    padding: 4%;
+    padding-top: 0;
+    background-color: $cardBackgroundColor;
+    border-radius: 6px;
+    margin: 2%;
+
+    .timer-button {
+      @include TimerButtonStyle;
+    }
+
+    .break-button {
+      @include BreakButtonStyle;
+    }
+  }
+
+  .inputs-container {
     display: flex;
     flex-direction: row;
 
-    .task-input{
+    .task-input {
       @include InputStyle;
     }
   }
-  .add-task-btn{
+
+  .add-task-btn {
     margin: 4%;
     width: auto;
-
     font-family: $font;
     font-weight: 600;
     font-size: 20px;
@@ -34,19 +54,20 @@
     background-color: $accentColor;
     color: $BtnTextColor;
     border: 0;
-    &:hover{
-      background-color: #ba2cb7;
-      color: #e1c4e1;
+
+    &:hover {
+      @include HoverButton;
     }
   }
 
-  .todoList{
+  .todoList {
     display: flex;
     flex-direction: column;
     justify-self: space-between;
 
   }
-  .task{
+
+  .task {
     @include TaskCard
   }
 

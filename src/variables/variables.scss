@@ -1,20 +1,64 @@
 $font: 'Poppins', sans-serif;
 $BtnTextColor: #f5edf5;
+$hoverBtnTextColor: #e1c4e1;
+$hoverBtnBgColor: #ba2cb7;
+$TimerButtonTextColor: #191919;
+$TimerButtonBgColor: #e89be6;
 $accentColor: #d240cf;
-$taskBackgroundColor: #eddaed;
+$cardBackgroundColor: #eddaed;
 $backgroundColor: #ce9ecf;
 
-@mixin InputStyle{
+@mixin InputStyle {
     width: 70%;
     padding: 5%;
     border-radius: 16px;
     border: 2px solid $accentColor;
     margin: 1%;
 
-    
+
 }
 
-@mixin TaskCard{
+@mixin TimerButtonStyle {
+    border-radius: 100%;
+    margin: 1%;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: $TimerButtonBgColor;
+    color: $TimerButtonTextColor;
+    border: 0;
+
+    &:hover {
+        @include HoverButton;
+    }
+}
+
+@mixin BreakButtonStyle {
+    margin: 1%;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 1%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: $TimerButtonBgColor;
+    color: $TimerButtonTextColor;
+    border: 0;
+
+    &:hover {
+        @include HoverButton;
+    }
+}
+
+@mixin HoverButton {
+    background-color: $hoverBtnBgColor;
+    color: $hoverBtnTextColor;
+}
+
+@mixin TaskCard {
     margin: 1%;
     padding: 2%;
     height: 60px;
@@ -22,22 +66,27 @@ $backgroundColor: #ce9ecf;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $taskBackgroundColor;
+    background-color: $cardBackgroundColor;
     border-radius: 8px;
-    .days-left-text{
-    font-weight: 300;
+
+    .days-left-text {
+        font-weight: 300;
     }
-    &:hover{
-    background-color: #edcbed;
+
+    &:hover {
+        background-color: #edcbed;
     }
-    .done-btn{
+
+    .done-btn {
         @include DoneButtonStyle;
-    &:hover{
-        color:#af29ac;
-    }
+
+        &:hover {
+            color: #af29ac;
+        }
     }
 }
-@mixin DoneButtonStyle{
+
+@mixin DoneButtonStyle {
     background-color: transparent;
     border: 0;
     font-family: $font;

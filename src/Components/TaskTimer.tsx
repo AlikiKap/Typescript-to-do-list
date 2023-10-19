@@ -22,40 +22,56 @@ function TaskTimer({ expiryTimestamp }: MyTimerProps) {
     const playOrPause = () => {
         if (isRunning)
             return (
-                <button onClick={pause}><FaPause /></button>
+                <button 
+                className="timer-button"
+                onClick={pause}><FaPause /></button>
             )
         else
             return (
-                <button onClick={start}><FaPlay /></button>
+                <button 
+                className="timer-button"
+                onClick={start}><FaPlay /></button>
 
             )
 
     }
     return (
-        <div style={{ textAlign: 'center' }}>
-            <h1>Pomodoro Timer</h1>
-            <div>The Pomodoro Technique is a time management method that involves breaking your work into focused intervals, typically 25 minutes in length, followed by a short 5-minute break. After completing four such intervals, you take a longer break of around 15-30 minutes. This structured approach helps improve productivity and concentration by encouraging regular, dedicated work periods while preventing burnout.</div>
+        <div className="timer-container">
             <div style={{ fontSize: '100px' }}>
                 <span>{minutes}</span>:<span>{seconds}</span>
             </div>
+            <div>
             <span>
                 {playOrPause()}
             </span>
-            <button onClick={() => {
+            <button 
+            className="timer-button"
+            onClick={() => {
                 const time = new Date();
                 time.setMinutes(time.getMinutes() + 25);
                 restart(time)
             }}><FaRotateRight /></button>
-            <button onClick={() => {
+            </div>
+            <div>
+            <button 
+            className="break-button"
+            onClick={() => {
                 const time = new Date();
                 time.setMinutes(time.getMinutes() + 5);
                 restart(time)
             }}>Small Break</button>
-            <button onClick={() => {
+            <button
+            className="break-button"
+            onClick={() => {
                 const time = new Date();
                 time.setMinutes(time.getMinutes() + 15);
                 restart(time)
             }}>Long Break</button>
+            </div>
+            <h1>Pomodoro Timer</h1>
+            <div>The Pomodoro Technique is a time management method that involves breaking your work into focused intervals, typically 25 minutes in length, followed by a short 5-minute break. After completing four such intervals, you take a longer break of around 15-30 minutes. This structured approach helps improve productivity and concentration by encouraging regular, dedicated work periods while preventing burnout.</div>
+
+
         </div>
     );
 }

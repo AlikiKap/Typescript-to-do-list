@@ -22,7 +22,7 @@
   </p>
 </div>
 
-![Alt text](image.png)
+![Alt text](image-1.png)
 
 ## Table of contents
 1. [About The Project](#about-the-project)
