@@ -7,6 +7,7 @@ interface Props{
 }
 
 const TodoTask = ({task, completeTask}: Props ) => {
+
   return (
     <div className='task'>
       <div>{task.taskName}</div>

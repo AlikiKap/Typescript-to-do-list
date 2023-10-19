@@ -10,14 +10,16 @@ const App: FC =() => {
 const [task, setTask] = useState<string>("");
 const [deadline, setDeadline] = useState<number>(0);
 const [todoList, setTodoList] = useState<Task[]>([]);
+const time = new Date();
 
+time.setMinutes(time.getMinutes() + 25)
 
 const  handleChange = (event: ChangeEvent<HTMLInputElement>):void => {
   
   if (event.target.name === 'task'){
     setTask(event.target.value)
   }else{
-    setDeadline(Number(event.target.value))
+    setDeadline(Number(event.target.value));
   }
 };
 
@@ -38,17 +40,16 @@ const addTask = ():void =>{
 
   setDeadline(0);
   setTask('');
+  
 };
+
+
 
 const completeTask = (taskNameToDelete:string):void => {
       setTodoList(todoList.filter((task) => {
         return task.taskName !== taskNameToDelete
       }))
 }
-
-
-const time = new Date();
-time.setMinutes(time.getMinutes() + 25);
 
   return (
     <>
@@ -68,6 +69,7 @@ time.setMinutes(time.getMinutes() + 25);
           placeholder='task'
           name ='task'
           value={task}
+          required
           onChange={handleChange}
           onKeyDown={handleKeypress}>
           </input>

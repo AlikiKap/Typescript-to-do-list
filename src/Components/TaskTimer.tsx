@@ -1,4 +1,7 @@
 import { TimerResult, useTimer } from "react-timer-hook"
+import { FaPause } from "react-icons/fa"
+import { FaPlay } from "react-icons/fa"
+import { FaRotateRight } from "react-icons/fa6"
 
 interface MyTimerProps {
     expiryTimestamp: Date
@@ -9,8 +12,6 @@ function TaskTimer({ expiryTimestamp }: MyTimerProps) {
         totalSeconds,
         seconds,
         minutes,
-        hours,
-        days,
         isRunning,
         start,
         pause,
@@ -18,21 +19,43 @@ function TaskTimer({ expiryTimestamp }: MyTimerProps) {
         restart,
     }: TimerResult = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
 
+    const playOrPause = () => {
+        if (isRunning)
+            return (
+                <button onClick={pause}><FaPause /></button>
+            )
+        else
+            return (
+                <button onClick={start}><FaPlay /></button>
+
+            )
+
+    }
     return (
         <div style={{ textAlign: 'center' }}>
-            <h1>Timer</h1>
+            <h1>Pomodoro Timer</h1>
+            <div>The Pomodoro Technique is a time management method that involves breaking your work into focused intervals, typically 25 minutes in length, followed by a short 5-minute break. After completing four such intervals, you take a longer break of around 15-30 minutes. This structured approach helps improve productivity and concentration by encouraging regular, dedicated work periods while preventing burnout.</div>
             <div style={{ fontSize: '100px' }}>
-                <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+                <span>{minutes}</span>:<span>{seconds}</span>
             </div>
-            <p>{isRunning ? 'Running' : 'Not running'}</p>
-            <button onClick={start}>Start</button>
-            <button onClick={pause}>Pause</button>
-            <button onClick={resume}>Resume</button>
+            <span>
+                {playOrPause()}
+            </span>
             <button onClick={() => {
                 const time = new Date();
                 time.setMinutes(time.getMinutes() + 25);
                 restart(time)
-            }}>Restart</button>
+            }}><FaRotateRight /></button>
+            <button onClick={() => {
+                const time = new Date();
+                time.setMinutes(time.getMinutes() + 5);
+                restart(time)
+            }}>Small Break</button>
+            <button onClick={() => {
+                const time = new Date();
+                time.setMinutes(time.getMinutes() + 15);
+                restart(time)
+            }}>Long Break</button>
         </div>
     );
 }
